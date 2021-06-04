@@ -23,9 +23,13 @@ client.on("message", (msg) => {
     } else {
       msg.reply(message[0]) //posts image of Raccon
     }
+
   } else if (msg.content.startsWith(prefix + "ping")) {
     ping = Date.now() - msg.createdTimestamp; //basic ping
     msg.reply(`Ping time is ${ping} ms.`)
+
+  } else if (msg.content.startsWith(prefix + "help")) {
+    msg.reply("type 'r$raccoon' for a raccoon pic, type 'r$ping' for the latency between the bot's server and your server.");
   }
 });
 
