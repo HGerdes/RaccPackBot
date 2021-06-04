@@ -11,7 +11,7 @@ client.on('ready', () => {
 });
 
 client.on("message", (msg) => {
-  if (msg.content === "r!raccoon") { //if the bot is triggered
+  if (msg.content === "r$raccoon") { //if the bot is triggered
     fs.readdir("./rpics", (err, files) => { //opens the directory for reading and sends the files inside to an array
       if (err)
         console.log(err);
