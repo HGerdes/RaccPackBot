@@ -16,11 +16,11 @@ client.on("message", (msg) => {
       if (err)
         console.log(err);
       else {
-        max = files.length; //sets array to number of files in the picture directory
-        rand = Math.floor(Math.random() * max + 1); //sets a random number between 1 and the number of files in the picture directory
+        const max = files.length; //sets array to number of files in the picture directory
+        const rand = Math.floor(Math.random() * max + 1); //sets a random number between 1 and the number of files in the picture directory
         files.forEach(file => { //iterates through the array
           fTest = file.split('.'); //cuts the current file into two elements (name and extension)
-          fNum = Number(fTest[0]); //converts the string to an actual number
+          const fNum = Number(fTest[0]); //converts the string to an actual number
           if (fNum === rand) { //strictly compares fNum to the generated random number
             const attachment = new Discord.MessageAttachment("./rpics/" + file); //if it matches, it attaches the corresponding file to a variable
             if (fNum === 42) {
