@@ -21,7 +21,7 @@ client.on("message", (msg) => {
     if (message[1] === 42) {
       msg.reply("YOU GOT RUE-COONED!", message[0]); //posts cute picture of Rue plus Rue easter egg <3
     } else {
-      msg.reply(message[0]) //posts image of Raccon
+      msg.reply(message[0]) //posts image of Raccoon
     }
   } else if (msg.content.startsWith(prefix + "ping")) {
     ping = Date.now() - msg.createdTimestamp; //basic ping
