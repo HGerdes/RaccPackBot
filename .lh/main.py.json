@@ -1,0 +1,46 @@
+{
+    "sourceFile": "main.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1622782152450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1622782254043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\n import discord\n import os\n \n client = discord.Client()\n@@ -15,5 +14,5 @@\n \n     if message.content.startswith('$hello'):\n         await message.channel.send('Hello!')\n \n-client.run(os.getenv('TOKEN'))\n+client.run(ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE)\n"
+                },
+                {
+                    "date": 1622782288200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import discord\n-import os\n \n client = discord.Client()\n \n @client.event\n"
+                },
+                {
+                    "date": 1622782708834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n \n     if message.content.startswith('$hello'):\n         await message.channel.send('Hello!')\n \n-client.run(ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE)\n+client.run(os.getenv('TOKEN')ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE)\n"
+                },
+                {
+                    "date": 1622782724656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import discord\n+import os\n \n client = discord.Client()\n \n @client.event\n@@ -13,5 +14,5 @@\n \n     if message.content.startswith('$hello'):\n         await message.channel.send('Hello!')\n \n-client.run(os.getenv('TOKEN')ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE)\n+client.run(os.getenv('ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE'))\n"
+                },
+                {
+                    "date": 1622782870334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n \n     if message.content.startswith('$hello'):\n         await message.channel.send('Hello!')\n \n-client.run(os.getenv('ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE'))\n+client.run(os.getenv('TOKEN'))\n"
+                },
+                {
+                    "date": 1622783048493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import discord\n-import os\n \n client = discord.Client()\n \n @client.event\n@@ -14,5 +13,5 @@\n \n     if message.content.startswith('$hello'):\n         await message.channel.send('Hello!')\n \n-client.run(os.getenv('TOKEN'))\n+client.run(ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE)\n"
+                },
+                {
+                    "date": 1622783177031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import discord\n+import os\n \n client = discord.Client()\n \n @client.event\n@@ -13,5 +14,5 @@\n \n     if message.content.startswith('$hello'):\n         await message.channel.send('Hello!')\n \n-client.run(ODUwMjI0MDI1MDI3NDc3NTA0.YLmm0w.dwLRQdV0NEs1H9A7FlkVPZ4nvKE)\n+client.run(os.getenv('TOKEN'))\n"
+                }
+            ],
+            "date": 1622782152450,
+            "name": "Commit-0",
+            "content": "\nimport discord\nimport os\n\nclient = discord.Client()\n\n@client.event\nasync def on_ready():\n    print('We have logged in as {0.user}'.format(client))\n\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n\n    if message.content.startswith('$hello'):\n        await message.channel.send('Hello!')\n\nclient.run(os.getenv('TOKEN'))\n"
+        }
+    ]
+}
