@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs'); //node.js file reading
 const client = new Discord.Client();
 require('dotenv').config(); //lets the bot token be stored in a private file
+const seedRandom = require('seedrandom'); //RNG
 
 const prefix = "r$";
 
@@ -33,9 +34,15 @@ client.on("message", (msg) => {
   }
 });
 
-let randNum = (max) => {
-  const rand = Math.floor(Math.random() * max + 1);
-  return rand;
+// not used anymore
+// let randNum = (max) => {
+//   const rand = Math.floor(Math.random() * max + 1);
+//   return rand;
+// }
+
+let seededRNG = (max) => {
+  let rng = seedRandom();
+  return Math.floor(rng() * max + 1);
 }
 
 let readFiles = (path) => {
@@ -45,14 +52,14 @@ let readFiles = (path) => {
 
 let chooseFile = () => {
   const files = readFiles("./rpics"); //receives array from readFiles
-  const rand = randNum(files.length); //receives random number from randNum
+  const rng = seededRNG(files.length); //generates random number based on how many pics there are
 
   for (let i = 0; i < files.length; i++) { //iterates through the array
     let file = files[i];
     let fTest = file.split('.'); //cuts the current file into two elements (name and extension)
     let fNum = Number(fTest[0]); //converts the string to an actual number
 
-    if (fNum === rand) { //strictly compares fNum to the generated random number
+    if (fNum === rng) { //strictly compares fNum to the generated random number
       const attachment = new Discord.MessageAttachment("./rpics/" + file); //if it matches, it attaches the corresponding file to a variable
       return [attachment, fNum];
     }
