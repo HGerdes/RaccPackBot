@@ -42,7 +42,9 @@ client.on("message", (msg) => {
 
 let seededRNG = (max) => {
   let rng = seedRandom();
-  return Math.floor(rng() * max + 1);
+  let d = new Date();
+  let seed = d.getTime();
+  return Math.floor(rng(seed) * max + 1);
 }
 
 let readFiles = (path) => {
